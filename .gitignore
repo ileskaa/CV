@@ -2,3 +2,6 @@ CV.aux
 CV.log
 CV.pdf
 CV.synctex.gz
+*.fdb_latexmk
+*.fls
+*.out
