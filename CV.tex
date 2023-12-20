@@ -1,10 +1,36 @@
 % RequirePackage can be used before documentclass, whille usepackage cannot
+% T1 is an 8-bit font encoding, while the TeX default is the 7-bit OT1
 \RequirePackage[T1]{fontenc}
-\documentclass[10pt]{article}
+\documentclass[10pt, A4]{article}
 
+% we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}
 
-\usepackage{times}
+% provides \isempty test
+\usepackage{xstring, xifthen}
+
+% tex-live font
+\usepackage[default]{raleway}
+
+% select Adobe Times Roman as default font
+%\usepackage{times}
+
+% set up the use of sans font as a default
+\renewcommand{\familydefault}{\sfdefault}
+
+% more font size definitions
+\usepackage{moresize}
+
+% include fontawesome icon set
+\usepackage{fontawesome}
+
+% use to vertically center content
+% [1] is the number of parameters the new command will take
+% any settings set within this group will be confined to this group only
+\newcommand{\vcenteredinclude}[1]{\begingroup
+  \setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
 
 \begin{document}
-	a
+	aaaaaaTTTT
 \end{document}
