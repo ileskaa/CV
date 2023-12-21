@@ -223,7 +223,7 @@
 	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
     \textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
-	
+
 	\hspace{4pt}
 	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
 		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
@@ -251,7 +251,9 @@
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
 		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
-      \textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
+			\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{
+				\makebox[0.25\mpwidth]{\textcolor{white}{#1}}
+			} \\
 			\textcolor{maincol}{\textbf{#3}} & \\
 		\end{tabular*}\\[8pt]
 
@@ -328,8 +330,34 @@
 
 \begin{paracol}{2}
 \begin{leftcolumn}
-aaaa
+ %-----------------------------------------------
+ %	 CV IMAGE
+ %-----------------------------------------------
+ \includegraphics[width=\linewidth]{CV_kuva.jpg}
+
+ %-----------------------------------------------
+ %	 PROFILE
+ %-----------------------------------------------
+
+ % add some space between picture and profile
+ % vfill is a TeX primitive
+ % it produces a rubber length whcih can stretch or shrink vertically
+ % rubber lengths have a natural length + a degree of elasticity
+ % e.g., the \fill length command has a natural len of 0 but is infinitely
+ % stretchable
+ % \vfill ends the paragraph at the spot and adds the filling vertical space
+ \vfill
+ % \null is the same as \hbox{}
+ % is tan be used for a material which reserves no space but shows TeX that
+ % there is a box which is taken into account for typesetting
+ \null
+ \cvsection{PROFIILI}
+
+ \cvtext{blabla}
 \end{leftcolumn}
+\begin{rightcolumn}
+ bbb
+\end{rightcolumn}
 
 \end{paracol}
 \end{document}
