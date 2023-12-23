@@ -11,5 +11,7 @@ Valtiotieteiden maisteri, joka on suuntautumassa täysin uudelle urapolulle. Ty�
 
 Etsin nyt kesätyöpaikkaa, jossa pääsen kehittämään ohjelmointitaitojani projektityöskentelyn kautta.
 
+Tavoitteenani on kesätyö, jossa 
+
 Tietojenkäsittelytieteen opiskelija Helsingin Yliopistossa,
 jolla on kokemusta full stack -kehityksestä.
