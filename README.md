@@ -9,3 +9,5 @@ Kielitaito?
 
 Mainittavaa:
 Virtualisointi
+PostgreSQL
+Redis
