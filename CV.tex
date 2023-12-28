@@ -220,7 +220,7 @@
 % param 2: level (for example in years)
 % param 3: percent, values range from 0 to 1
 \newcommand{\cvskill}[3] {
-	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
+	\begin{tabular*}{1\mpwidth}{p{0.82\mpwidth}  r}
     \textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
 
@@ -335,6 +335,19 @@
  %-----------------------------------------------
  \includegraphics[width=\linewidth]{CV_kuva.jpg}
 
+ %-----------------------------------------------------------------------------
+ %       TITLE  HEADER
+ %------------------------------------------------------------------------------
+
+ % Make a box with the stated bg color.
+ % \fcolorbox also puts a frame around the box
+ % 1st arg is frame col, 2nd arg is box bg color
+ \fcolorbox{white}{darkcol}{
+  %\begin{minipage}
+   b
+  %\end{minipage}
+ }
+
  %-----------------------------------------------
  %	 PROFILE
  %-----------------------------------------------
@@ -361,6 +374,28 @@
   full stack -kehityksestä ja algoritmeista. Tavoitteenani on kesätyö, jossa
   pääsen hyödyntämään ja kehittämään verkko-ohjelmointitaitojani.
  }
+
+ %-----------------------------------------------
+ %	 SKILLS
+ %-----------------------------------------------
+ \cvsection{TAITOMATRIISI}
+
+ \cvskill{Python}{3 v}{1}
+
+ \cvskill{JavaScript}{2 v}{0.8}
+
+ \cvskill{HTML ja CSS}{2 v}{0.75}
+
+ \cvskill{Linux}{> 2 v}{0.7}
+
+ \cvskill{SQL}{> 1 v}{0.5}
+
+ \cvskill{Node.js}{> 1 v}{0.5}
+
+ \cvskill{Git}{1 v}{0.4}
+
+ \cvskill{Django}{< 1 v}{0.2}
+
 
  %-----------------------------------------------
  %	 CONTACT
@@ -398,7 +433,7 @@
  {Opinnot ovat sisältäneet pelin kirjoittamista käyttäen Pythonia ja
  Pygame-kirjastoa, mm. puu ja verkko -tietorakenteisiin liittyvien algoritmien
  toteutusta, dynaamista ohjelmointia, tietokantojen teoriaa ja hallinnointia,
- tietoturvallisuutta, sekä verkko-ohjelmoitnia käyttäen Django-ohjelmointikehystä.
+ tietoturvallisuutta, sekä verkko-ohjelmointia Django-ohjelmointikehystä käyttäen.
  }
 
  \cvmetaevent{11/2021 - 11/2022}
@@ -430,15 +465,23 @@
  \cvsection{TYÖKOKEMUS}
 
  \cvevent{01/2023 - 09/2023}{Varusmiespalvelus}{Puolustusvoimat}
- {Palvellessani Elektronisen sodankäynnin keskuksessa, virtualisointia, data-analytiikkaa}{}{}{}
+ {Palvellessani Elektronisen sodankäynnin keskuksessa, pääsin perehtymään
+ virtualisointitekniikkaan ja hyödyntämään Python-osaamistani
+ data-analytiikkatehtäviin.}
+ {}{}{}
 
  % 3 last parameters are optional
  \cvevent{08/2021 - 09/2022}{Sisäinen tarkastaja}{Société Générale}
- {bbb}{}{}{}
+ {Datan käsittely ja analyysi, riskialueiden tunnistaminen, korjaustoimenpiteiden
+ suunnittelu ja toimeenpaneminen, tarkastusraporttien laatiminen.}
+ {}{}{}
 
  \cvevent{01/2021 - 07/2021}{Henkilöstöpäällikön assistentti}
  {Société Générale}
- {bbb}{}{}{}
+ {Vuotuisen tarkastussuunnitelman etenemisen seuraaminen ja seurantataulukon
+ päivityksen automatisoiminen VBA:lla. Tarkastushankkeissa esiintyvien vaikeuksien
+ tunnistaminen ja niistä raportoiminen.}
+ {}{}{}
 \end{rightcolumn}
 
 \end{paracol}
