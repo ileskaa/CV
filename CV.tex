@@ -333,19 +333,37 @@
  %-----------------------------------------------
  %	 CV IMAGE
  %-----------------------------------------------
- \includegraphics[width=\linewidth]{CV_kuva.jpg}
+ \includegraphics[width=1.02\linewidth]{CV_kuva.jpg}
 
  %-----------------------------------------------------------------------------
  %       TITLE  HEADER
- %------------------------------------------------------------------------------
+ %-----------------------------------------------------------------------------
 
+ \hspace{-2.5pt}
  % Make a box with the stated bg color.
  % \fcolorbox also puts a frame around the box
  % 1st arg is frame col, 2nd arg is box bg color
  \fcolorbox{white}{darkcol}{
-  %\begin{minipage}
-   b
-  %\end{minipage}
+  % there are 3 optional args:
+  % [position][height][inner-pos]
+  % position determines the vertical alignment relative to the text line.
+  % by default, the alignment is center.
+  % height specifies the height of the minipage
+  % inner-pos controls the vertical placement of the contents inside the box
+  % takes 1 mandatory arg: text-width
+  \begin{minipage}[c][3cm][c]{\mpwidth}
+   \begin{center}
+	\LARGE{
+	 \textbf{
+	  \textcolor{white}{Akseli Ingervo}
+	 }
+	} \\[-12pt]
+	\textcolor{white}{\rule{0.1\textwidth}{1.25pt}} \\[2pt]
+	\large{
+	 \textcolor{white}{Tietojenkäsittelytieteen opiskelija}
+	}
+   \end{center}
+  \end{minipage}
  }
 
  %-----------------------------------------------
