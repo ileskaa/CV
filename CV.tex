@@ -98,7 +98,7 @@
 % remove all possible margins
 \geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
 
-% fancyhydr provides facilities for construction headers & footers,
+% fancyhydr provides facilities for constructing headers & footers,
 % and for controlling their use
 \usepackage{fancyhdr}
 % produce empty heads and feet. No page numbers nor headings
@@ -333,37 +333,30 @@
  %-----------------------------------------------
  %	 CV IMAGE
  %-----------------------------------------------
- \includegraphics[width=1.02\linewidth]{CV_kuva.jpg}
+ \includegraphics[width=\linewidth]{CV_kuva.jpg}
 
  %-----------------------------------------------------------------------------
- %       TITLE  HEADER
+ %       NAME
  %-----------------------------------------------------------------------------
 
- \hspace{-2.5pt}
- % Make a box with the stated bg color.
- % \fcolorbox also puts a frame around the box
- % 1st arg is frame col, 2nd arg is box bg color
- \fcolorbox{white}{darkcol}{
-  % there are 3 optional args:
-  % [position][height][inner-pos]
-  % position determines the vertical alignment relative to the text line.
-  % by default, the alignment is center.
-  % height specifies the height of the minipage
-  % inner-pos controls the vertical placement of the contents inside the box
-  % takes 1 mandatory arg: text-width
-  \begin{minipage}[c][3cm][c]{\mpwidth}
-   \begin{center}
-	\LARGE{
-	 \textbf{
-	  \textcolor{white}{Akseli Ingervo}
-	 }
-	} \\[-12pt]
-	\textcolor{white}{\rule{0.1\textwidth}{1.25pt}} \\[2pt]
-	\large{
-	 \textcolor{white}{Tietojenkäsittelytieteen opiskelija}
+ \vspace{2mm}
+ \colorbox{darkcol}{
+ % minipage has 3 optional args:
+ % [position][height][inner-pos]
+ % position determines the vertical alignment relative to the text line.
+ % by default, the alignment is center.
+ % height specifies the height of the minipage
+ % inner-pos controls the vertical placement of the contents inside the box
+ % takes 1 mandatory arg: text-width
+ \begin{minipage}[c][1cm][c]{.97\mpwidth}
+  \begin{center}
+   \LARGE{
+	\textbf{
+	 \textcolor{white}{Akseli Ingervo}
 	}
-   \end{center}
-  \end{minipage}
+   }
+  \end{center}
+ \end{minipage}
  }
 
  %-----------------------------------------------
@@ -377,7 +370,8 @@
  % e.g., the \fill length command has a natural len of 0 but is infinitely
  % stretchable
  % \vfill ends the paragraph at the spot and adds the filling vertical space
- \vfill
+ %\vfill
+
  % \null is the same as \hbox{}
  % is tan be used for a material which reserves no space but shows TeX that
  % there is a box which is taken into account for typesetting
@@ -386,19 +380,19 @@
 
  \small\cvtext{
   Valtiotieteiden maisteri, joka on suuntautumassa täysin uudelle urapolulle.
-  Työskenneltyäni muutaman vuoden pankkimaailmassa, päätin seurata intohimoani,
-  ja ryhtyä opiskelemaan tietojenkäsittelyä Helsingin Yliopistossa.
-  Opintojeni sekä omien projektieni kautta, minulle on kertynyt kokemusta
+  Työskenneltyäni muutaman vuoden pankkimaailmassa, päätin seurata intohimoani
+  ja ryhtyä opiskelemaan tietojenkäsittelyä.
+  Opintojeni sekä omien projektieni kautta, olen saanut kokemusta
   full stack -kehityksestä ja algoritmeista. Tavoitteenani on kesätyö, jossa
   pääsen hyödyntämään ja kehittämään verkko-ohjelmointitaitojani.
- }
+ } \\[4mm]
 
  %-----------------------------------------------
  %	 SKILLS
  %-----------------------------------------------
  \cvsection{TAITOMATRIISI}
 
- \cvskill{Python}{3 v}{1}
+ \cvskill{Python}{> 2 v}{1}
 
  \cvskill{JavaScript}{2 v}{0.8}
 
@@ -406,9 +400,11 @@
 
  \cvskill{Linux}{> 2 v}{0.7}
 
- \cvskill{SQL}{> 1 v}{0.5}
+ \cvskill{SQL}{1 v}{0.5}
 
- \cvskill{Node.js}{> 1 v}{0.5}
+ \cvskill{Node.js}{1 v}{0.5}
+
+ \cvskill{Express}{< 1 v}{0.4}
 
  \cvskill{Git}{1 v}{0.4}
 
@@ -447,35 +443,45 @@
  %-----------------------------------------------
  \cvsection{KOULUTUS JA SERTIFIKAATIT}
 
- \cvmetaevent{09/2023 - nykyhetki}{Tietojenkäsittelytiede}{Helsingin Yliopisto}
+ \cvevent{09/2023 - nykyhetki}
+ {Tietojenkäsittelytiede}
+ {Helsingin Yliopisto}
  {Opinnot ovat sisältäneet pelin kirjoittamista käyttäen Pythonia ja
  Pygame-kirjastoa, mm. puu ja verkko -tietorakenteisiin liittyvien algoritmien
  toteutusta, dynaamista ohjelmointia, tietokantojen teoriaa ja hallinnointia,
  tietoturvallisuutta, sekä verkko-ohjelmointia Django-ohjelmointikehystä käyttäen.
- }
+ }{}{}{}
 
- \cvmetaevent{11/2021 - 11/2022}
+ \cvevent{11/2021 - 11/2022}
  {Verkko-ohjelmoinnin kursseja}
  {Treehouse}
  {HTML, CSS, JavaScript, NodeJS, Express, React, PHP, SQL. Kaikki opiskelemani
  aiheet ovat nähtävissä \href{https://teamtreehouse.com/profiles/akseliingervo}
  {\underline{täältä}.}
- }
+ }{}{}{}
 
- \cvmetaevent{03/2021 - 09/2021}
- {IBM Data Science Professional Certificate}{Coursera}
+ \cvevent{03/2021 - 09/2021}
+ {IBM Data Science Professional Certificate}
+ {Coursera}
  {Sisälsi datan käsittelyä Pythonin Pandas-kirjaston avulla, relaatiotietokantojen
  hallintaa SQL-kielellä, kaavioiden piirtämistä käyttäen Matplotlib ja Seaborn
  -kirjastoja, verkkoharavointia Beautiful Soup -pakettia hyödyntäen, sekä
- koneoppimista scikit-learn-kirjaston avulla.}
+ koneoppimista scikit-learn-kirjaston avulla.
+ }{}{}{}
 
- \cvmetaevent{09/2019 - 07/2021}{Kansainvälisen talouden maisterintutkinto}
- {Sciences Po Bordeaux (Ranska)}{Maktrotalous, rahoitus, riskien arviointi,
- geopolitiikka.}
+ \cvevent{09/2019 - 07/2021}
+ {Kansainvälisen talouden maisterintutkinto}
+ {Sciences Po Bordeaux – Ranska}
+ {Maktrotalous, rahoitus, riskien arviointi,
+ geopolitiikka.
+ }{}{}{}
 
- \cvmetaevent{09/2014 - 05/2019}{Valtiotieteen kandidaatintutkinto}
- {Sciences Po Bordeaux (Ranska)}{Polittinen teoria ja historia, mikro- ja
- makrotalous, nykyhistoria, perustuslakioppi.}
+ \cvevent{09/2014 - 05/2019}
+ {Valtiotieteen kandidaatintutkinto}
+ {Sciences Po Bordeaux – Ranska}
+ {Polittinen teoria ja historia, mikro- ja
+ makrotalous, nykyhistoria, perustuslakioppi.
+ }{}{}{}
 
  %-----------------------------------------------
  %	 WORK EXPERIENCE
@@ -489,13 +495,14 @@
  {}{}{}
 
  % 3 last parameters are optional
- \cvevent{08/2021 - 09/2022}{Sisäinen tarkastaja}{Société Générale}
+ \cvevent{08/2021 - 09/2022}{Sisäinen tarkastaja}
+ {Société Générale – Pariisi ja Luxemburg}
  {Datan käsittely ja analyysi, riskialueiden tunnistaminen, korjaustoimenpiteiden
  suunnittelu ja toimeenpaneminen, tarkastusraporttien laatiminen.}
  {}{}{}
 
  \cvevent{01/2021 - 07/2021}{Henkilöstöpäällikön assistentti}
- {Société Générale}
+ {Société Générale – Pariisi}
  {Vuotuisen tarkastussuunnitelman etenemisen seuraaminen ja seurantataulukon
  päivityksen automatisoiminen VBA:lla. Tarkastushankkeissa esiintyvien vaikeuksien
  tunnistaminen ja niistä raportoiminen.}
