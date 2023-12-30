@@ -1,5 +1,5 @@
 #!/bin/sh
-git add -A
+git add CV.tex
 git commit -m "Update CV"
 git push
 echo 'Finished'
