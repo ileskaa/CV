@@ -2,8 +2,8 @@ CV.aux
 CV.log
 CV.pdf
 CV.synctex.gz
+source.tex
 *.fdb_latexmk
 *.fls
 *.out
-source.tex
 versions/
