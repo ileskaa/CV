@@ -1,1 +1,1 @@
-CV with left sidebar
+CV with left sidebar.
