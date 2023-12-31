@@ -58,18 +58,18 @@
   % makebox command for the picture environment
   % u must specify a widht and a height in multiples of \unitlength
   % makebox creates a box just wide enough to contain the text specified
-	\makebox(#2, #2){\textcolor{maincol}{
-    % with csname, u can go from a list of character tokens to a control sequence
-    \csname fa#1\endcsname
+  \makebox(#2, #2){\textcolor{maincol}{
+  % with csname, u can go from a list of character tokens to a control sequence
+  \csname fa#1\endcsname
   }}
 }
 
 % icon with text shortcut
 \newcommand{\icontext}[4]{
   % \mpwidth will be defined later
-	\vcenteredhbox{\icon{#1}{#2}}  \hspace{2pt}  \parbox{0.9\mpwidth}{
-    % 2 params: color and text
-    \textcolor{#4}{#3}
+  \vcenteredhbox{\icon{#1}{#2}}  \hspace{2pt}  \parbox{0.9\mpwidth}{
+  % 2 params: color and text
+  \textcolor{#4}{#3}
   }
 }
 
@@ -144,8 +144,12 @@
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 %-----------------------------------------------
-%	Color DEFINITIONS
+%	COLOR DEFINITIONS
 %-----------------------------------------------
+
+% defines \transparent and \texttransparent
+% they are used like \color and \textcolot,
+% except that the first arg is the transparency
 \usepackage{transparent}
 \usepackage{color}
 
@@ -169,8 +173,8 @@
 \usepackage[hidelinks]{hyperref}
 
 % returns minipage width minus two times \fboxsep
-% to keep padding included in width calculations
-% can also be used for other boxes / environments
+% to keep padding included in width calculations.
+% Can also be used for other boxes / environments
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
 
 
@@ -191,7 +195,7 @@
 }
 
 %-----------------------------------------------
-%	 CV LIST
+%	 CV TEXT
 %-----------------------------------------------
 
 % base class to wrap any text based stuff here. Renders like a paragraph.
@@ -385,11 +389,11 @@
  \cvsection{PROFIILI}
 
  \small\cvtext{
-  Valtiotieteiden maisteri, joka on suuntautumassa täysin uudelle urapolulle.
+  Valtiotieteiden maisteri, joka on suuntautumassa uudelle urapolulle.
   Työskenneltyäni muutaman vuoden pankkimaailmassa, päätin seurata intohimoani
-  ja ryhtyä opiskelemaan tietojenkäsittelyä.
+  ja ryhdyin opiskelemaan tietojenkäsittelyä.
   Opintojeni sekä omien projektieni kautta, olen saanut kokemusta
-  full stack -kehityksestä ja algoritmeista. Tavoitteenani on kesätyö, jossa
+  full stack -kehityksestä ja algoritmeista. Nyt tavoitteenani on kesätyö, jossa
   pääsen hyödyntämään ja kehittämään verkko-ohjelmointitaitojani.
  } \\[4mm]
 
@@ -456,7 +460,7 @@
  {Opinnot ovat sisältäneet mm. puu ja verkko -tietorakenteisiin liittyvien
  algoritmien toteutusta, pelin kirjoittamista käyttäen Pythonia ja
  Pygame-kirjastoa, dynaamista ohjelmointia, tietokantojen teoriaa ja hallinnointia,
- tietoturvallisuutta, sekä verkko-ohjelmointia Django-ohjelmointikehystä käyttäen.
+ tietoturvallisuutta sekä verkko-ohjelmointia Django-ohjelmistokehystä käyttäen.
  }{}{}{}
 
  \cvevent{11/2021 - 11/2022}
@@ -472,7 +476,7 @@
  {Coursera}
  {Sisälsi datan käsittelyä Pythonin Pandas-kirjaston avulla, relaatiotietokantojen
  hallintaa SQL-kielellä, kaavioiden piirtämistä käyttäen Matplotlib ja Seaborn
- -kirjastoja, verkkoharavointia Beautiful Soup -pakettia hyödyntäen, sekä
+ -kirjastoja, verkkoharavointia Beautiful Soup -pakettia hyödyntäen sekä
  koneoppimista scikit-learn-kirjaston avulla.
  }{}{}{}
 
@@ -505,13 +509,13 @@
  \cvevent{08/2021 - 09/2022}{Sisäinen tarkastaja}
  {Société Générale – Pariisi ja Luxemburg}
  {Datan käsittely ja analyysi, riskialueiden tunnistaminen, korjaustoimenpiteiden
- suunnittelu ja toimeenpaneminen, tarkastusraporttien laatiminen.}
+ suunnittelu ja toimeenpano sekä tarkastusraporttien laatiminen.}
  {}{}{}
 
  \cvevent{01/2021 - 07/2021}{Henkilöstöpäällikön assistentti}
  {Société Générale – Pariisi}
  {Vuotuisen tarkastussuunnitelman etenemisen seuraaminen ja seurantataulukon
- päivityksen automatisoiminen VBA:lla. Tarkastushankkeissa esiintyvien vaikeuksien
+ päivityksen automatisoiminen VBA:lla. Tarkastushankkeissa esiintyvien ongelmien
  tunnistaminen ja niistä raportoiminen.}
  {}{}{}
 \end{rightcolumn}
