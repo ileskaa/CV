@@ -1,1 +1,1 @@
-CV with left sidebar written using LaTeX.
+LaTeX CV with left sidebar.
