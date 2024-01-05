@@ -230,8 +230,10 @@
 % param 2: level (for example in years)
 % param 3: percent, values range from 0 to 1
 \newcommand{\cvskill}[3] {
-	\begin{tabular*}{1\mpwidth}{p{0.82\mpwidth}  r}
-    \textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
+	\begin{tabular*}{1\mpwidth}
+		% change the value below to adjust the dist of the year marking
+		{p{0.75\mpwidth}  r}
+		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2}\\
 	\end{tabular*}%
 
 	\hspace{4pt}
@@ -314,18 +316,6 @@
 	\cvtext{#4}\\[14pt]
 }
 
-%-----------------------------------------------
-%	 QR CODE
-%-----------------------------------------------
-
-% Renders a qrcode image (centered, relative to the parentwidth)
-% param 1: percent width, from 0 to 1
-\newcommand{\cvqrcode}[1] {
-	\begin{center}
-		\includegraphics[width={#1}\mpwidth]{qrcode}
-	\end{center}
-}
-
 
 %===============================================%
 %
@@ -399,23 +389,23 @@
  %\hskip 0pt plus 1filll
  \cvsection{SKILLS}
 
- \cvskill{Python}{> 2 v}{1}
+ \cvskill{Python}{> 2 yrs}{1}
 
- \cvskill{JavaScript}{2 v}{0.8}
+ \cvskill{JavaScript}{\hskip 7pt 2 yrs}{0.8}
 
- \cvskill{HTML ja CSS}{2 v}{0.75}
+ \cvskill{HTML ja CSS}{\hskip 7pt 2 yrs}{0.75}
 
- \cvskill{Linux}{> 2 v}{0.7}
+ \cvskill{Linux}{> 2 yrs}{0.7}
 
- \cvskill{SQL}{1 v}{0.5}
+ \cvskill{SQL}{\hskip 9pt 1 yr}{0.5}
 
- \cvskill{Node.js}{1 v}{0.5}
+ \cvskill{Node.js}{\hskip 9pt 1 yr}{0.5}
 
- \cvskill{Express}{< 1 v}{0.4}
+ \cvskill{Express}{\hskip 3pt < 1 yr}{0.4}
 
- \cvskill{Git}{1 v}{0.4}
+ \cvskill{Git}{\hskip 10pt 1 yr}{0.4}
 
- \cvskill{Django}{< 1 v}{0.2}
+ \cvskill{Django}{\hskip 5pt < 1 yr}{0.2}
 
 
  %-----------------------------------------------
@@ -447,30 +437,20 @@
  \cvevent{09/2023 - present}
  {Computer Science}
  {University of Helsinki}
- {My studies have included algorithms related to trees and graphs, the writing of a game using Python and the Pygame library, dynamic programming
- %
- Opinnot ovat sisältäneet mm. puu ja verkko -tietorakenteisiin liittyvien
- algoritmien toteutusta, pelin kirjoittamista käyttäen Pythonia ja
- Pygame-kirjastoa, dynaamista ohjelmointia, tietokantojen teoriaa ja hallinnointia,
- tietoturvallisuutta sekä verkko-ohjelmointia Django-ohjelmistokehystä käyttäen.
+ {My studies have included algorithms related to trees and graphs, the writing of a game using Python and the Pygame library, dynamic programming, database theory and administration, cybersecurity, as well as web development with the Django framework.
  }{}{}{}
 
  \cvevent{11/2021 - 11/2022}
- {Verkko-ohjelmoinnin kursseja}
+ {Web Development Courses}
  {Treehouse}
- {HTML, CSS, JavaScript, NodeJS, Express, React, PHP, SQL. Kaikki opiskelemani
- aiheet ovat nähtävissä \href{https://teamtreehouse.com/profiles/akseliingervo}
- {\underline{täältä}.}
+ {HTML, CSS, JavaScript, NodeJS, Express, React, PHP, SQL. All the topics I have studied can be checked \href{https://teamtreehouse.com/profiles/akseliingervo}
+ {\underline{here}.}
  }{}{}{}
 
  \cvevent{03/2021 - 09/2021}
  {IBM Data Science Professional Certificate}
  {Coursera}
- {Sisälsi datan käsittelyä Pythonin Pandas-kirjaston avulla, relaatiotietokantojen
- hallintaa SQL-kielellä, kaavioiden piirtämistä käyttäen Matplotlib ja Seaborn
- -kirjastoja, verkkoharavointia Beautiful Soup -pakettia hyödyntäen sekä
- koneoppimista scikit-learn-kirjaston avulla.
- }{}{}{}
+ {The certificate included data manipulation with the Pandas library, management of relational databases with SQL, plotting charts with the Matplotlib and Seaborn libraries, web scraping with Beautiful Soup, and machine learning with scikit-learn.}{}{}{}
 
  \cvevent{09/2019 - 07/2021}
  {Kansainvälisen talouden maisterintutkinto}
